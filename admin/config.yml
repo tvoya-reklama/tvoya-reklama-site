@@ -1,7 +1,7 @@
 # Після створення GitHub-репозиторію замініть REPLACE_WITH_REPOSITORY
 backend:
   name: github
-  repo: REPLACE_WITH_REPOSITORY
+  repo: tvoya-reklama/tvoya-reklama-site
   branch: main
 media_folder: assets/uploads
 public_folder: /assets/uploads
