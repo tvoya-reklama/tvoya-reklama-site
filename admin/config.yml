@@ -1,0 +1,40 @@
+# Після створення GitHub-репозиторію замініть REPLACE_WITH_REPOSITORY
+backend:
+  name: github
+  repo: REPLACE_WITH_REPOSITORY
+  branch: main
+media_folder: assets/uploads
+public_folder: /assets/uploads
+locale: uk
+collections:
+  - name: website
+    label: Сайт
+    files:
+      - name: main
+        label: Тексти, контакти та роботи
+        file: content.json
+        format: json
+        fields:
+          - {label: Назва компанії, name: company, widget: string}
+          - {label: Заголовок на головній, name: tagline, widget: string}
+          - {label: Опис на головній, name: heroDescription, widget: text}
+          - {label: Текст про нас, name: about, widget: text}
+          - {label: Років досвіду, name: years, widget: string}
+          - {label: Телефон 1, name: phone1, widget: string}
+          - {label: Телефон 2, name: phone2, widget: string}
+          - {label: Instagram без @, name: instagram, widget: string}
+          - {label: Адреса, name: address, widget: string}
+          - label: Послуги
+            name: services
+            widget: list
+            fields:
+              - {label: Назва, name: title, widget: string}
+              - {label: Опис, name: description, widget: text}
+          - label: Наші роботи
+            name: projects
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - {label: Назва роботи, name: title, widget: string}
+              - {label: Категорія, name: category, widget: select, options: [Вивіски, Оформлення вітрин, Брендування, Банери, Таблички, Поліграфія, Інше]}
+              - {label: Фотографія, name: image, widget: image}
